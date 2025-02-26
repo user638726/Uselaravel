@@ -31,9 +31,9 @@
             </tr>
             @foreach ($data as $item => $value)
                 <tr>
-                    <td>{{ $value['id'] }}</td>
-                    <td>{{ $value['name'] }}</td>
-
+                    <td>{{ $value->id }}</td>
+                    <td>{{ $value->name }}</td>
+                    <td>{{ $value->tel }}</td>
                 </tr>
             @endforeach
         </table>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class StudentController extends Controller
 {
@@ -10,24 +11,10 @@ class StudentController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        $data=[
-            [
-                'id'=>1,
-                'name'=>'Amy',
-            ],
-            [
-                'id'=>2,
-                'name'=>'Bob',
-            ],
-            [
-                'id'=>'3',
-                'name'=>'cat',
-            ]
+    { $data = DB::table('students')->get();
 
-            ];
+        return view('student.index', ['data' => $data]);
 
-            return view('students.index',['data'=>$data]);
 
     }
 
