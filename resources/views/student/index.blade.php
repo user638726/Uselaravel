@@ -28,6 +28,7 @@
             <tr>
                 <th width="10%">ID</th>
                 <th>name</th>
+                <th>tel</th>
             </tr>
             @foreach ($data as $item => $value)
                 <tr>
