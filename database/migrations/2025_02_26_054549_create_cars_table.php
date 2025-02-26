@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
         });
+        Schema::table('cars', function (Blueprint $table) {
+            $table->integer('votes');
+        });
     }
 
     /**

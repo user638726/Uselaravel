@@ -12,5 +12,5 @@ Route::get('/student_index', [StudentController::class, 'index']);
 //Route::get('/student_excel', [StudentController::class, 'excel']);
 //Route::get('/student_show', [StudentController::class, 'show']);
 //Route::resource('students', StudentController::class);
-//Route::get('/bus_index', [BusController::class, 'index']);
-//Route::resource('bus', BusController::class);
+Route::get('/bus_index', [BusController::class, 'index']);
+Route::resource('bus', BusController::class);
